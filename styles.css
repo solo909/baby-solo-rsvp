@@ -1491,3 +1491,17 @@ footer { padding-block: 32px; }
   .costume-card { padding: 20px 22px 28px; }
   .costume-art { width: 126px; margin-top: -8px; }
 }
+
+/* RSVP delivery feedback matches the invitation palette. */
+.form-error {
+  padding: 14px 18px;
+  border: 2px solid var(--deep-rose);
+  border-radius: 12px;
+  background: #fff0f6;
+  color: #6b2347;
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
+}
+.form-error[hidden], .success-message[hidden] { display: none; }
+.submit-button:disabled { opacity: 0.65; cursor: wait; }
+.form-note a { color: var(--deep-rose); text-decoration: underline; }

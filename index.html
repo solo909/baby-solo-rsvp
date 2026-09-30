@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Italiana&family=Parisienne&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=layout-registry-2" />
+    <link rel="stylesheet" href="styles.css?v=rsvp-formspree-1" />
   </head>
   <body class="locked">
     <div class="page-ornaments" aria-hidden="true">
@@ -168,26 +168,20 @@
             <p>Please respond by October 4, 2026. One person may RSVP for the whole group.</p>
           </div>
 
-          <div class="success-message" id="success-message" role="status" hidden>
+          <div class="success-message" id="success-message" role="status" tabindex="-1" hidden>
             <span aria-hidden="true">✦</span>
-            <h3>Your RSVP has been sent!</h3>
+            <h3>Your RSVP has been received!</h3>
             <p>Thank you for celebrating Baby Solo with us.</p>
           </div>
 
           <form
             id="rsvp-form"
-            action="https://formsubmit.co/Steven-444@live.com"
+            action="https://formspree.io/f/xqpanwjr"
+            data-formspree-endpoint="https://formspree.io/f/xqpanwjr"
             method="POST"
           >
-            <input type="hidden" name="_url" value="https://solo909.github.io/baby-solo-rsvp/" />
             <input type="hidden" name="_subject" value="New Baby Solo RSVP" />
-            <input type="hidden" name="_template" value="table" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://solo909.github.io/baby-solo-rsvp/?rsvp=success#rsvp"
-            />
-            <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            <input class="honeypot" type="text" name="_gotcha" aria-label="Leave this field blank" tabindex="-1" autocomplete="off" />
 
             <label for="primary-name">Your Name</label>
             <input id="primary-name" name="Primary guest" type="text" autocomplete="name" required />
@@ -217,7 +211,10 @@
             </div>
 
             <button class="button button-dark submit-button" type="submit">Send RSVP</button>
-            <p class="form-note">Your response will be emailed privately to Steven.</p>
+            <p class="form-error" id="rsvp-error" role="alert" tabindex="-1" hidden></p>
+            <p class="form-note">Your response will be sent privately to Steven.</p>
+            <p class="form-note">Having trouble? <a href="mailto:Steven-444@live.com?subject=Baby%20Solo%20RSVP">Email Steven your RSVP</a> with your name, whether you can attend, and everyone in your group.</p>
+            <noscript><p class="form-note">Please email Steven your RSVP using the link above.</p></noscript>
           </form>
         </section>
       </div>
@@ -238,6 +235,6 @@
       preload="none"
     ></audio>
 
-    <script src="script.js?v=rsvp-clean-url-1"></script>
+    <script src="script.js?v=rsvp-formspree-1"></script>
   </body>
 </html>
